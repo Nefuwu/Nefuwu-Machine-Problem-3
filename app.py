@@ -33,8 +33,8 @@ with tab1:
     # header and link for stocks
     st.write("<h2 style='text-align: center;'> SMI Corp. Stocks</h2>", unsafe_allow_html= True)
     st.markdown("<p style='text-align: center; font-size: 16px;'><a href='https://www.marketwatch.com/investing/stock/sm/charts?countrycode=ph&mod=mw_quote_advanced'>SMI Corp. Stocks</a>", unsafe_allow_html=True)
-    st.write("<h5 style='text-align: center;'> Month of March</h5>", unsafe_allow_html= True)
     
+
     # input data points
     x_input = st.text_input("Enter x-coordinates (comma-separated):", value = "1,2,3,6,7,8,9,10,13,14,15,16,17,20,21", disabled=True) 
     y_input = st.text_input("Enter y-coordinates (comma-separated):", value = "889.000,890.500,896.000,886.000,880.000,889.000,871.000,875.000,875.000,860.000,874.000,874.000,897.000,883.500,900.000", disabled=True)
@@ -65,6 +65,7 @@ with tab1:
         # display the interpolated value
         st.markdown(f"<br>The interpolated value at P({p}) is <span style='color:green'>{answer}</span>", unsafe_allow_html=True)
    
+    st.write("<h5 style='text-align: center;'> Month of March</h5>", unsafe_allow_html= True)
     # create a pandas DataFrame from the input data
     data = pd.DataFrame({
         'x': x,
